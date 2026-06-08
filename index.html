@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mövenpick Mobile App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="mobile-wrapper">
+
+        <section id="screen-1" class="screen active">
+            <header class="header-s1">
+                <button class="side-btn" id="burger-btn"><i class="fa-solid fa-bars"></i></button>
+                <div class="logo-center">MÖVENPICK</div>
+                <button class="side-btn"><i class="fa-solid fa-bell"></i></button>
+            </header>
+
+            <div class="hero-image" style="background-image: url('C:\\Users\\KIBERone_3\\Desktop\\hotel06\\images\\AboutUs.png');">
+                <div class="hero-text-overlay">
+                    <h1>Welcome to Paradise</h1>
+                    <p>Exclusive Beach Resort & Spa</p>
+                </div>
+            </div>
+
+            <div class="s1-block-2 text-center">
+                <p class="label-dark">Family Escape</p>
+                <p class="label-gold">Luxury Stay 2026</p>
+                <button class="btn-gold" id="go-to-menu">Explore Services</button>
+            </div>
+
+            <div class="s1-block-3">
+                <p class="text-main">Discover our premium hotel zones designed for ultimate relaxation and family fun.</p>
+                <div class="single-large-img" style="background-image: url('C:\\Users\\KIBERone_3\\Desktop\\hotel06\\images\\Group.png');"></div>
+            </div>
+
+            <div class="s1-block-4 text-center">
+                <div class="location-img" style="background-image: url('C:\\Users\\KIBERone_3\\Desktop\\hotel06\\images\\Group.png'); margin-bottom: 15px;"></div>
+                
+                <h2>Our Location</h2>
+                <p>Located on the pristine sands of Na Jomtien beach, just minutes away from local attractions.</p>
+                
+                <div class="location-img" style="background-image: url('C:\\Users\\KIBERone_3\\Desktop\\hotel06\\images\\where.png');"></div>
+            </div>
+
+            <div class="s1-three-labels">
+                <span><i class="fa-solid fa-phone"></i> Contact</span>
+                <span><i class="fa-solid fa-map-location-dot"></i> Route</span>
+                <span><i class="fa-solid fa-circle-info"></i> Info</span>
+            </div>
+
+            <div class="s1-block-5">
+                <p>Stay updated with our special offers and events inside the resort during your stay.</p>
+                <div class="btn-left-container">
+                    <button class="btn-dark-sm">More Details</button>
+                </div>
+            </div>
+
+            <div class="s1-block-6">
+                <div class="text-left-part">
+                    <h3>Loyalty Member</h3>
+                    <p>Earn points and get extra discounts on food and spa.</p>
+                </div>
+                <button class="btn-gold-sm">Join Program</button>
+            </div>
+
+            <footer class="s1-footer">
+                <div class="bottom-logo-left">MÖVENPICK</div>
+            </footer>
+        </section>
+
+
+        <section id="screen-2" class="screen">
+            <header class="header-form">
+                <div class="header-form-left">
+                    <button class="form-back-btn" data-target="screen-1"><i class="fa-solid fa-chevron-left"></i> Back</button>
+                </div>
+            </header>
+
+            <div class="s2-padding">
+                <h2 class="section-title text-center">Our Premium Services</h2>
+            </div>
+            
+            <div class="s2-main-banner" style="background-image: url('C:\\Users\\KIBERone_3\\Desktop\\hotel06\\images\\tour.png');"></div>
+
+            <div class="services-container">
+                <div class="service-item-row" data-target="screen-3">
+                    <img src="C:\Users\KIBERone_3\Desktop\hotel06\images\food.png" alt="BBQ">
+                    <div class="service-item-right">
+                        <h4>BBQ Dinner by the Sea</h4>
+                        <p>Enjoy fresh seafood cooked by top chefs right on the beach.</p>
+                        <button class="btn-select">Select</button>
+                    </div>
+                </div>
+                <div class="service-item-row" data-target="screen-4">
+                    <img src="C:\Users\KIBERone_3\Desktop\hotel06\images\bar.png" alt="Steak">
+                    <div class="service-item-right">
+                        <h4>Steak House Premium</h4>
+                        <p>A rich selection of imported meats and fine vintage wines.</p>
+                        <button class="btn-select">Select</button>
+                    </div>
+                </div>
+                <div class="service-item-row" data-target="screen-5" data-service="Little Birds Kids Club">
+                    <img src="C:\Users\KIBERone_3\Desktop\hotel06\images\kids.png" alt="Kids">
+                    <div class="service-item-right">
+                        <h4>Little Birds Kids Club</h4>
+                        <p>Safe and creative fun hub for your children all day long.</p>
+                        <button class="btn-select">Select</button>
+                    </div>
+                </div>
+                <div class="service-item-row" data-target="screen-5" data-service="Beach Fire Show">
+                    <img src="C:\Users\KIBERone_3\Desktop\hotel06\images\fire.png" alt="Fire">
+                    <div class="service-item-right">
+                        <h4>Beach Fire Show</h4>
+                        <p>Weekly spectacular performance on the main shore line.</p>
+                        <button class="btn-select">Select</button>
+                    </div>
+                </div>
+                <div class="service-item-row" data-target="screen-5" data-service="Main Infinity Pool">
+                    <img src="C:\Users\KIBERone_3\Desktop\hotel06\images\tour.png" alt="Pool">
+                    <div class="service-item-right">
+                        <h4>Main Infinity Pool</h4>
+                        <p>Relax in our temperature-controlled panoramic water space.</p>
+                        <button class="btn-select">Select</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="screen-3" class="screen">
+            <header class="header-service-detail">
+                <button class="exit-btn" data-target="screen-2"><i class="fa-solid fa-xmark"></i> Exit</button>
+                <div class="logo-right">MÖVENPICK</div>
+            </header>
+
+            <div class="detail-content">
+                <div class="detail-meta">
+                    <h2>BBQ Beach Event</h2>
+                    <p>Exclusive Dining Experience</p>
+                </div>
+
+                <div class="detail-meta-secondary">
+                    <h3>Price Range</h3>
+                    <p>From 1,500 THB per person</p>
+                </div>
+
+                <div class="detail-image" style="background-image: url('C:\\Users\\KIBERone_3\\Desktop\\hotel06\\images\\food.png');"></div>
+
+                <div class="detail-description">
+                    <h3>About the service</h3>
+                    <p>Indulge in a premium selection of freshly caught seafood, imported meats, and artisanal grilled sides right at the ocean's edge.</p>
+                </div>
+
+                <div class="detail-timing">
+                    <h3>Operation Hours</h3>
+                    <p>Daily from 6:00 PM to 10:30 PM (Booking required)</p>
+                </div>
+            </div>
+
+            <footer class="detail-footer-action">
+                <button class="btn-book-now" data-target="screen-5" data-service="BBQ Beach Event">Book Now</button>
+            </footer>
+        </section>
+
+
+        <section id="screen-4" class="screen">
+            <header class="header-service-detail">
+                <button class="exit-btn" data-target="screen-2"><i class="fa-solid fa-xmark"></i> Exit</button>
+                <div class="logo-right">MÖVENPICK</div>
+            </header>
+
+            <div class="detail-content">
+                <div class="detail-meta">
+                    <h2>Steak House Premium</h2>
+                    <p>Fine Dining & Grill Room</p>
+                </div>
+
+                <div class="detail-meta-secondary">
+                    <h3>Dress Code</h3>
+                    <p>Smart Casual / Formal</p>
+                </div>
+
+                <div class="detail-image" style="background-image: url('C:\\Users\\KIBERone_3\\Desktop\\hotel06\\images\\bar.png');"></div>
+
+                <div class="detail-description">
+                    <h3>About the service</h3>
+                    <p>Our award-winning chef presents dry-aged wagyu cuts, classic side dishes, and a curated wine pairing menu in a refined environment.</p>
+                </div>
+
+                <div class="detail-timing">
+                    <h3>Operation Hours</h3>
+                    <p>Tuesday to Sunday: 5:00 PM - 11:00 PM</p>
+                </div>
+            </div>
+
+            <footer class="detail-footer-action">
+                <button class="btn-book-now" data-target="screen-5" data-service="Steak House Premium">Book Now</button>
+            </footer>
+        </section>
+
+
+        <section id="screen-5" class="screen">
+            <header class="header-form">
+                <div class="header-form-left">
+                    <button class="form-back-btn" id="form-back"><i class="fa-solid fa-chevron-left"></i> Back</button>
+                    <div class="form-hotel-logo">MÖVENPICK</div>
+                </div>
+            </header>
+
+            <div class="detail-image" style="background-image: url('C:\\Users\\KIBERone_3\\Desktop\\hotel06\\images\\tour.png');"></div>
+
+            <form id="booking-form-element" class="form-body">
+                <div class="input-container">
+                    <div class="label-with-icon">
+                        <i class="fa-regular fa-user"></i>
+                        <label for="input-name">Full Name</label>
+                    </div>
+                    <input type="text" id="input-name" placeholder="Enter your name" required>
+                </div>
+
+                <div class="input-container">
+                    <div class="label-with-icon">
+                        <i class="fa-regular fa-star"></i>
+                        <label for="input-service">Chosen Service</label>
+                    </div>
+                    <input type="text" id="input-service" placeholder="Service Name" required>
+                </div>
+
+                <div class="input-container">
+                    <div class="label-with-icon">
+                        <i class="fa-regular fa-calendar-days"></i>
+                        <label for="input-datetime">Date and Preferable Time</label>
+                    </div>
+                    <input type="text" id="input-datetime" placeholder="e.g. 15 June, 7:00 PM" required>
+                </div>
+
+                <div class="input-container">
+                    <div class="label-with-icon">
+                        <i class="fa-regular fa-comment-dots"></i>
+                        <label for="input-notes">Special Requirements</label>
+                    </div>
+                    <textarea id="input-notes" rows="4" placeholder="Allergies, table preference, high chair etc."></textarea>
+                </div>
+
+                <div class="form-bottom-action">
+                    <button type="submit" class="btn-large-submit">Confirm Booking</button>
+                </div>
+            </form>
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

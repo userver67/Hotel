@@ -1,0 +1,241 @@
+/* Общий сброс */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Эмулятор оболочки телефона */
+.mobile-wrapper {
+    width: 100%;
+    max-width: 430px;
+    height: 100vh;
+    background-color: #ffffff;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.mobile-wrapper::-webkit-scrollbar {
+    width: 0px;
+}
+
+/* Логика экранов */
+.screen {
+    display: none;
+    flex-direction: column;
+    min-height: 100%;
+    background-color: #fff;
+    width: 100%;
+}
+
+.screen.active {
+    display: flex;
+}
+
+/* Хелперы разметки */
+.text-center { text-align: center; }
+
+/* --- ЭКРАН 1 --- */
+.header-s1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: #fff;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.side-btn {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    color: #333;
+    cursor: pointer;
+}
+
+.logo-center {
+    font-weight: 800;
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+    color: #111;
+}
+
+.hero-image {
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+}
+
+.hero-text-overlay {
+    background: linear-gradient(to top, rgba(0,0,0,0.75), transparent);
+    color: #fff;
+    padding: 20px;
+    width: 100%;
+}
+
+.hero-text-overlay h1 { font-size: 1.4rem; font-weight: 500; }
+.hero-text-overlay p { font-size: 0.85rem; opacity: 0.8; }
+
+.s1-block-2 {
+    padding: 25px 20px;
+}
+.label-dark { font-weight: 700; color: #222; font-size: 1.1rem; }
+.label-gold { color: #A38A63; font-size: 0.9rem; font-weight: 500; margin: 4px 0 15px; }
+
+.btn-gold {
+    background-color: #A38A63;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 0.95rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.s1-block-3 { padding: 0 20px 20px; }
+.text-main { font-size: 0.9rem; color: #555; line-height: 1.4; margin-bottom: 15px; }
+
+.rounded-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+.grid-img {
+    aspect-ratio: 1.2;
+    background-size: cover;
+    background-position: center;
+    border-radius: 16px; /* Закругленные углы */
+}
+
+.s1-block-4 { padding: 10px 20px 25px; }
+.s1-block-4 h2 { font-size: 1.3rem; color: #A38A63; margin-bottom: 8px; }
+.s1-block-4 p { font-size: 0.9rem; color: #666; }
+
+.s1-three-labels {
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 10px;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    font-size: 0.85rem;
+    color: #A38A63;
+    font-weight: 600;
+}
+
+.s1-block-5 { padding: 25px 20px; }
+.s1-block-5 p { font-size: 0.9rem; color: #444; margin-bottom: 12px; }
+.btn-left-container { display: flex; justify-content: flex-start; }
+.btn-dark-sm { background-color: #222; color: white; border: none; padding: 8px 16px; font-size: 0.8rem; border-radius: 4px; }
+
+.s1-block-6 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fcfbf9;
+    border-top: 1px solid #f5f2eb;
+}
+.text-left-part { flex: 1; padding-right: 15px; }
+.text-left-part h3 { font-size: 1rem; color: #222; }
+.text-left-part p { font-size: 0.75rem; color: #78746c; }
+.btn-gold-sm { background-color: #A38A63; color: white; border: none; padding: 8px 14px; font-size: 0.8rem; border-radius: 4px; white-space: nowrap; }
+
+.s1-footer { padding: 25px 20px; background-color: #f9f9f9; }
+.bottom-logo-left { font-size: 1.4rem; font-weight: 900; color: #222; text-align: left; }
+
+
+/* --- ЭКРАН 2 (МЕНЮ) --- */
+.s2-padding { padding: 20px 20px 10px; }
+.section-title { font-size: 1.3rem; color: #A38A63; }
+.s2-main-banner { height: 160px; background-size: cover; background-position: center; }
+
+.services-container { display: flex; flex-direction: column; padding: 15px; gap: 15px; }
+.service-item-row {
+    display: flex;
+    background: #fff;
+    border: 1px solid #ededed;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    cursor: pointer;
+}
+.service-item-row img { width: 100px; height: 100px; object-fit: cover; }
+.service-item-right { padding: 10px; display: flex; flex-direction: column; justify-content: space-between; flex: 1; }
+.service-item-right h4 { font-size: 0.9rem; color: #111; }
+.service-item-right p { font-size: 0.75rem; color: #666; line-height: 1.3; }
+.btn-select { align-self: flex-end; background-color: #A38A63; color: white; border: none; font-size: 0.75rem; padding: 4px 10px; border-radius: 3px; }
+
+.btn-back-home { margin: auto auto 20px auto; background: none; border: 1px solid #ccc; padding: 8px 20px; border-radius: 20px; font-size: 0.85rem; color: #555; cursor: pointer; }
+
+
+/* --- ЭКРАНЫ 3 И 4 (ДЕТАЛИ УСЛУГ) --- */
+.header-service-detail {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+.exit-btn { background: none; border: none; font-size: 0.95rem; color: #A38A63; cursor: pointer; font-weight: 600; }
+.logo-right { font-weight: 800; color: #111; font-size: 1rem; letter-spacing: 1px; }
+
+.detail-content { display: flex; flex-direction: column; }
+.detail-meta { padding: 10px 20px; }
+.detail-meta h2 { font-size: 1.4rem; color: #111; }
+.detail-meta p { font-size: 0.85rem; color: #A38A63; margin-top: 2px; }
+
+.detail-meta-secondary { padding: 10px 20px 15px; }
+.detail-meta-secondary h3 { font-size: 1rem; color: #555; font-weight: 500; }
+.detail-meta-secondary p { font-size: 0.9rem; color: #222; }
+
+.detail-image { height: 200px; background-size: cover; background-position: center; width: 100%; margin-bottom: 15px; }
+.detail-description { padding: 15px 20px; background-color: #fafafa; }
+.detail-description h3 { font-size: 0.9rem; color: #A38A63; text-transform: uppercase; margin-bottom: 5px; letter-spacing: 0.5px; }
+.detail-description p { font-size: 0.9rem; color: #444; line-height: 1.4; }
+
+.detail-timing { padding: 20px; }
+.detail-timing h3 { font-size: 0.9rem; color: #A38A63; text-transform: uppercase; margin-bottom: 5px; }
+.detail-timing p { font-size: 0.9rem; color: #222; }
+
+.detail-footer-action { margin-top: auto; padding: 20px; }
+.btn-book-now { width: 100%; background-color: #A38A63; color: white; border: none; padding: 15px; border-radius: 4px; font-size: 1rem; font-weight: 600; cursor: pointer; }
+
+
+/* --- ЭКРАН 5 (ФОРМА ЗАЯВКИ) --- */
+.header-form { padding: 15px 20px; border-bottom: 1px solid #eee; }
+.header-form-left { display: flex; align-items: center; gap: 15px; }
+.form-back-btn { background: none; border: none; font-size: 0.95rem; color: #A38A63; cursor: pointer; }
+.form-hotel-logo { font-weight: 800; font-size: 1.1rem; color: #111; letter-spacing: 1px; }
+
+.form-body { padding: 20px; display: flex; flex-direction: column; gap: 20px; }
+.input-container { display: flex; flex-direction: column; gap: 6px; }
+
+/* Заголовки сверху поля, иконка слева от заголовка */
+.label-with-icon { display: flex; align-items: center; gap: 8px; color: #444; }
+.label-with-icon i { color: #A38A63; font-size: 1rem; width: 16px; text-align: center; }
+.label-with-icon label { font-size: 0.9rem; font-weight: 600; }
+
+.form-body input, .form-body textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1.5px solid #111; /* Контрастная рамка */
+    border-radius: 6px;
+    font-size: 0.95rem;
+    outline: none;
+}
+
+.form-bottom-action { margin-top: 10px; }
+.btn-large-submit { width: 100%; background-color: #A38A63; color: white; border: none; padding: 16px; font-size: 1.1rem; font-weight: 600; border-radius: 6px; cursor: pointer; }
